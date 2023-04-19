@@ -1,4 +1,4 @@
-BoolFlix (repo: vite-boolflix)
+<!-- BoolFlix (repo: vite-boolflix)
 
 In questo esercizio iniziamo a replicare la logica che sta dietro a tantissimi siti che permettono la visione di film e telefilm.
 Per fare questo, come fanno siti molto più rinomati, utilizzeremo un API che ci permette di avere un insieme di risultati congrui alla nostra ricerca.
@@ -22,7 +22,7 @@ Creare un layout base con una searchbar (una input e un button) in cui possiamo 
 1. Titolo
 2. TitoloOriginale
 3. Lingua
-4. Voto
+4. Voto -->
 
 Milestone 2:
 Trasformiamo la stringa statica della lingua in una vera e propria bandiera della nazione corrispondente, gestendo il caso in cui non abbiamo la bandiera della nazione ritornata dall’API (le flag non ci sono in FontAwesome).

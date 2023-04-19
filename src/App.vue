@@ -1,5 +1,7 @@
 <script>
 import { state } from "./state";
+import flag from './components/FlagItem.vue'
+import FlagItem from "./components/FlagItem.vue";
 export default {
   data() {
     return {
@@ -9,8 +11,11 @@ export default {
     searchMoviesDom(url) {
       state.searchMovies(url)
     }
+  }, transformStringInFlag() {
+
   },
   mounted() {
+    console.log(flag);
   }
 }
 </script>
@@ -31,6 +36,11 @@ export default {
         <p>{{ movie.original_language }}</p>
         <p>{{ movie.vote_average }}</p>
       </li>
+    </ul>
+  </div>
+  <div class="flag">
+    <ul>
+      <li v-for="flags in flag">{{ flag }}</li>
     </ul>
   </div>
   <!-- /movies -->
