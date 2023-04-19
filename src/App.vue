@@ -1,9 +1,14 @@
 <script>
 import { state } from "./state";
+import axios from 'axios';
 export default {
   data() {
     return {
       state
+    }
+  }, methods: {
+    search(url) {
+      state.searchMovies(state.API_URL_movies)
     }
   },
   mounted() {
@@ -15,7 +20,7 @@ export default {
 <template>
   <div class="searchBox">
     <input v-model="state.searchText" type="text" placeholder="Search Movies">
-    <input @click="state.searchMovies(state.API_URL_movies)" type="submit" value="Submit">
+    <input @click="search(state.API_URL_movies)" type="submit" value="Submit">
   </div>
   <!-- /searchBox -->
   <div class="movie_list">
