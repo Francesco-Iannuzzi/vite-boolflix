@@ -22,9 +22,5 @@ export const state = reactive({
                 console.log(err);
                 console.error(err.message);
             })
-    }, methods: {
-        searchMovies(API_URL_movies) {
-            console.log(API_URL_movies);
-        }
     }
 });
