@@ -7,7 +7,8 @@ export default {
     }
   }, methods: {
     searchMoviesSeriesDom(url) {
-      state.searchMoviesSeries(url)
+      state.searchMovies(url)
+      state.searchSeries(url)
     }
   }, transformStringInFlag() {
 

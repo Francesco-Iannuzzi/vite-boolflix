@@ -9,7 +9,7 @@ export const state = reactive({
     API_URL_series: 'tv?api_key=d1eb10a884fb991e4977a603a025083b&language=it-IT&query=',
     movies: [],
     series: [],
-    searchMoviesSeries(url) {
+    searchMovies(url) {
         url += this.API_URL_movies + `${this.searchText}`,
             axios
                 .get(url)
@@ -22,6 +22,8 @@ export const state = reactive({
                     console.log(err);
                     console.error(err.message);
                 })
+    },
+    searchSeries(url) {
         url += this.API_URL_series + `${this.searchText}`,
             axios
                 .get(url)
