@@ -7,16 +7,12 @@ export const state = reactive({
     API_URL_movies: 'https://api.themoviedb.org/3/search/movie?api_key=d1eb10a884fb991e4977a603a025083b&language=it-IT&query=',
     movies: [],
     searchMovies(url) {
+        url += `${this.searchText}`
         axios
             .get(url)
             .then(response => {
                 this.movies = response.data.results;
-                console.log(response.data.results);
-                console.log(this.movies);
-                url += `${this.searchText}`
-                console.log(this.API_URL_movies);
-                console.log(url);
-                console.log(this.movies);
+
             })
             .catch(err => {
                 console.log(err);

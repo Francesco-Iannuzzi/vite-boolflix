@@ -6,13 +6,11 @@ export default {
       state
     }
   }, methods: {
-    searchMovies(url) {
-      url = state.API_URL_movies + state.searchText
-      console.log(url);
+    searchMoviesDom(url) {
+      state.searchMovies(url)
     }
   },
   mounted() {
-    state.searchMovies(state.API_URL_movies)
   }
 }
 </script>
@@ -20,9 +18,10 @@ export default {
 <template>
   <div class="searchBox">
     <input v-model="state.searchText" type="text" placeholder="Search Movies">
-    <input @click="searchMovies(url)" type="submit" value="Submit">
+    <button @click="searchMoviesDom(state.API_URL_movies)">Submit</button>
   </div>
   <!-- /searchBox -->
+
   <div class="movie_list">
     <h1>Print Movies</h1>
     <ul v-if="state.movies.length !== 0">
