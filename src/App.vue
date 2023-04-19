@@ -19,9 +19,14 @@ export default {
   </div>
   <!-- /searchBox -->
   <div class="movie_list">
+    <h1>Print Movies</h1>
     <ul v-if="state.movies.length !== 0">
-      <li>Print Movies</li>
-      <li v-for="movie in state.movies">{{ movie.title }}</li>
+      <li v-for="movie in state.movies">
+        <p>{{ movie.title }}</p>
+        <p>{{ movie.original_title }}</p>
+        <p>{{ movie.original_language }}</p>
+        <p>{{ movie.vote_average }}</p>
+      </li>
     </ul>
   </div>
   <!-- /movies -->

@@ -4,7 +4,7 @@ import axios from 'axios';
 export const state = reactive({
     searchText: '',
     loading: true,
-    API_URL_movies: 'https://api.themoviedb.org/3/search/movie?api_key=d1eb10a884fb991e4977a603a025083b&language=it-IT&query=super',
+    API_URL_movies: 'https://api.themoviedb.org/3/search/movie?api_key=d1eb10a884fb991e4977a603a025083b&language=it-IT&query=fantozzi',
     movies: [],
     searchMovies(url) {
         axios
