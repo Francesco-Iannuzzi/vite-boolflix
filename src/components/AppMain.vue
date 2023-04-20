@@ -4,13 +4,17 @@ import FlagMoviesGeneration from "./FlagMoviesGeneration.vue";
 import FlagSeriesGeneration from "./FlagSeriesGeneration.vue";
 import PosterMoviesGeneration from "./PosterMoviesGeneration.vue";
 import PosterSeriesGeneration from "./PosterSeriesGeneration.vue";
+import PrintStarsMovie from "./PrintStarsMovie.vue";
+import PrintStarsSeries from "./PrintStarsSeries.vue";
 export default {
     name: 'AppMain',
     components: {
         FlagMoviesGeneration,
         FlagSeriesGeneration,
         PosterMoviesGeneration,
-        PosterSeriesGeneration
+        PosterSeriesGeneration,
+        PrintStarsMovie,
+        PrintStarsSeries
     },
     data() {
         return {
@@ -29,6 +33,7 @@ export default {
                     <li v-for="movie in state.movies">
                         <span>{{ movie.title }}-</span>
                         <span>{{ movie.original_title }}-</span>
+                        <PrintStarsMovie :elementStarMovie="movie"></PrintStarsMovie>
                         <span>
                             <FlagMoviesGeneration :elementMovie="movie"></FlagMoviesGeneration>
                         </span>
@@ -40,6 +45,7 @@ export default {
                     <li v-for="serie in state.series">
                         <span>{{ serie.name }}-</span>
                         <span>{{ serie.original_name }}-</span>
+                        <PrintStarsSeries :elementStarSerie="serie"></PrintStarsSeries>
                         <span>
                             <FlagSeriesGeneration :elementSerie="serie"></FlagSeriesGeneration>
                         </span>
