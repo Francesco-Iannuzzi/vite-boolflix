@@ -12,9 +12,15 @@ export default {
     },
     methods: {
         generationApiMovieFlag(movie) {
-            let urlMovies = state.API_URL_flags + movie.original_language.toUpperCase() + '/flat/32.png'
-            console.log(urlMovies);
-            return urlMovies
+            if (state.correctFlags.includes(movie.original_language.toUpperCase())) {
+                let urlMovies = state.API_URL_flags + movie.original_language.toUpperCase() + '/flat/32.png'
+                console.log(urlMovies);
+                return urlMovies
+            } else {
+                let urlMoviesMissing = 'https://www.otherworldproject.com/wiki/images/9/96/Unknown_flag.png'
+                return urlMoviesMissing
+
+            }
         }
     }
 }
