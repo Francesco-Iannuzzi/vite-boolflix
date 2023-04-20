@@ -1,16 +1,18 @@
 import { reactive } from 'vue'
 import axios from 'axios';
-
+import flagsDatabase from './assets/data/flagsDatabase';
 export const state = reactive({
     searchText: '',
     loading: true,
     API_URL_search: 'https://api.themoviedb.org/3/search/',
     API_URL_movies: 'movie?api_key=d1eb10a884fb991e4977a603a025083b&language=it-IT&query=',
     API_URL_series: 'tv?api_key=d1eb10a884fb991e4977a603a025083b&language=it-IT&query=',
+    API_URL_flags: 'https://flagsapi.com/',
     movies: [],
     series: [],
+    correctFlags: flagsDatabase,
     searchMovies(url) {
-        url += this.API_URL_movies + `${this.searchText}`,
+        url += this.API_URL_movies + this.searchText,
             axios
                 .get(url)
                 .then(response => {
@@ -24,7 +26,7 @@ export const state = reactive({
                 })
     },
     searchSeries(url) {
-        url += this.API_URL_series + `${this.searchText}`,
+        url += this.API_URL_series + this.searchText,
             axios
                 .get(url)
                 .then(response => {
