@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 import { state } from "../state.js";
 export default {
     name: 'PrintStarsSerie',
@@ -28,4 +28,4 @@ export default {
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped></style> -->

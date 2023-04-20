@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 import { state } from "../state.js";
 export default {
     name: 'PosterSeriesGeneration',
@@ -30,4 +30,4 @@ export default {
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped></style> -->

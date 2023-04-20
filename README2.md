@@ -36,8 +36,8 @@ In questa milestone come prima cosa aggiungiamo la copertina del film o della se
 Esempio di URL:
 https://image.tmdb.org/t/p/w342/wwemzKWzjKYJFfCeiB57q3r4Bcm.png -->
     
-Trasformiamo poi il voto da 1 a 10 decimale in un numero intero da 1 a 5, così da permetterci di stampare a schermo un numero di stelle piene che vanno da 1 a 5, lasciando le restanti vuote (troviamo le icone in FontAwesome).
-Arrotondiamo sempre per eccesso all’unità successiva, non gestiamo icone mezze piene (o mezze vuote :P)
+<!-- Trasformiamo poi il voto da 1 a 10 decimale in un numero intero da 1 a 5, così da permetterci di stampare a schermo un numero di stelle piene che vanno da 1 a 5, lasciando le restanti vuote (troviamo le icone in FontAwesome).
+Arrotondiamo sempre per eccesso all’unità successiva, non gestiamo icone mezze piene (o mezze vuote :P) -->
 
 Milestone 4:
 Trasformiamo quello che abbiamo fatto fino ad ora in una vera e propria webapp, creando un layout completo simil-Netflix:
@@ -51,7 +51,7 @@ aggiuntive già prese nei punti precedenti più la overview
 Mockup (on hover sul primo elemento)
 
 Consigli:
-1. Andateinfila, seguendolemilestone, non pensate all’interfaccia grafica fino al punto 4
+1. Andate in fila, seguendo le milestone, non pensate all’interfaccia grafica fino al punto 4
 2. Non pensate all’interfaccia grafica fino al punto 4 (si,l’hoscrittoduevolte), tutto può essere risolto con una <ul> non stilizzata
 3. Ricordatevi quanto imparato finora con le diverse esercitazioni:
 ○ Affrontate sempre prima il caso base minimo, senza complicazioni (ad es. “Se il titolo originale è uguale al titolo, magari dovrei nasconderlo”,
