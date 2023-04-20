@@ -11,6 +11,7 @@ export default {
         searchMoviesSeriesDom(url) {
             state.searchMovies(url);
             state.searchSeries(url);
+            // state.searchMulti(url);
         }
     }
 
@@ -21,7 +22,7 @@ export default {
     <header>
         <div class="searchBox">
             <input v-model="state.searchText" @keyup.enter="searchMoviesSeriesDom(state.API_URL_search)" type="text"
-                placeholder="Search Movies">
+                placeholder="Search Movies and Series">
             <button @click="searchMoviesSeriesDom(state.API_URL_search)">Submit</button>
         </div>
     </header>

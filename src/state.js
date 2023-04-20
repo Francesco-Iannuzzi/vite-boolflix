@@ -8,8 +8,11 @@ export const state = reactive({
     API_URL_movies: 'movie?api_key=d1eb10a884fb991e4977a603a025083b&language=it-IT&query=',
     API_URL_series: 'tv?api_key=d1eb10a884fb991e4977a603a025083b&language=it-IT&query=',
     API_URL_flags: 'https://flagsapi.com/',
+    API_URL_poster: 'https://image.tmdb.org/t/p/w92/',
     movies: [],
     series: [],
+    // API_URL_multi: 'https://api.themoviedb.org/3/search/multi?api_key=d1eb10a884fb991e4977a603a025083b&query=',
+    // multi: [],
     correctFlags: flagsDatabase,
     searchMovies(url) {
         url += this.API_URL_movies + this.searchText,
@@ -38,5 +41,19 @@ export const state = reactive({
                     console.log(err);
                     console.error(err.message);
                 })
-    }
+    },
+    // searchMulti(url) {
+    //     url += this.searchText,
+    //         axios
+    //             .get(url)
+    //             .then(response => {
+    //                 this.multi = response.data.results;
+    //                 console.log(this.multi);
+    //                 console.log(url);
+    //             })
+    //             .catch(err => {
+    //                 console.log(err);
+    //                 console.error(err.message);
+    //             })
+    // }
 });

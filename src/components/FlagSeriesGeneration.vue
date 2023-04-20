@@ -16,6 +16,11 @@ export default {
                 let urlSeries = state.API_URL_flags + serie.original_language.toUpperCase() + '/flat/32.png'
                 console.log(urlSeries);
                 return urlSeries
+            } else if (serie.original_language = 'en') {
+                serie.original_language = 'us'
+                let urlSeries = state.API_URL_flags + serie.original_language.toUpperCase() + '/flat/32.png'
+                console.log(urlSeries);
+                return urlSeries
             } else {
                 let urlSeriesMissing = 'https://www.otherworldproject.com/wiki/images/9/96/Unknown_flag.png'
                 return urlSeriesMissing

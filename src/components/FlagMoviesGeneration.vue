@@ -16,10 +16,15 @@ export default {
                 let urlMovies = state.API_URL_flags + movie.original_language.toUpperCase() + '/flat/32.png'
                 console.log(urlMovies);
                 return urlMovies
+            } else if (movie.original_language = 'en') {
+                movie.original_language = 'us'
+                let urlMovies = state.API_URL_flags + movie.original_language.toUpperCase() + '/flat/32.png'
+                console.log(urlMovies);
+                return urlMovies
+
             } else {
                 let urlMoviesMissing = 'https://www.otherworldproject.com/wiki/images/9/96/Unknown_flag.png'
                 return urlMoviesMissing
-
             }
         }
     }

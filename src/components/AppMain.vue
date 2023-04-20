@@ -2,11 +2,15 @@
 import { state } from "../state";
 import FlagMoviesGeneration from "./FlagMoviesGeneration.vue";
 import FlagSeriesGeneration from "./FlagSeriesGeneration.vue";
+import PosterMoviesGeneration from "./PosterMoviesGeneration.vue";
+import PosterSeriesGeneration from "./PosterSeriesGeneration.vue";
 export default {
     name: 'AppMain',
     components: {
         FlagMoviesGeneration,
-        FlagSeriesGeneration
+        FlagSeriesGeneration,
+        PosterMoviesGeneration,
+        PosterSeriesGeneration
     },
     data() {
         return {
@@ -28,6 +32,9 @@ export default {
                         <span>
                             <FlagMoviesGeneration :elementMovie="movie"></FlagMoviesGeneration>
                         </span>
+                        <span>
+                            <PosterMoviesGeneration :elementPosterMovie="movie"></PosterMoviesGeneration>
+                        </span>
                         <span>{{ movie.vote_average }}</span>
                     </li>
                     <li v-for="serie in state.series">
@@ -35,6 +42,9 @@ export default {
                         <span>{{ serie.original_name }}-</span>
                         <span>
                             <FlagSeriesGeneration :elementSerie="serie"></FlagSeriesGeneration>
+                        </span>
+                        <span>
+                            <PosterSeriesGeneration :elementPosterSerie="serie"></PosterSeriesGeneration>
                         </span>
                         <span>{{ serie.vote_average }}</span>
                     </li>
