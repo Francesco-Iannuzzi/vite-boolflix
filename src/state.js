@@ -41,19 +41,5 @@ export const state = reactive({
                     console.log(err);
                     console.error(err.message);
                 })
-    },
-    // searchMulti(url) {
-    //     url += this.searchText,
-    //         axios
-    //             .get(url)
-    //             .then(response => {
-    //                 this.multi = response.data.results;
-    //                 console.log(this.multi);
-    //                 console.log(url);
-    //             })
-    //             .catch(err => {
-    //                 console.log(err);
-    //                 console.error(err.message);
-    //             })
-    // }
+    }
 });
