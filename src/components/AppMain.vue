@@ -12,11 +12,8 @@ export default {
     },
     data() {
         return {
-            state
-        }
-    }, methods: {
-        isHover() {
-            console.log('ciao')
+            state,
+            isHover: false,
         }
     }
 }
@@ -29,12 +26,13 @@ export default {
 
                 <div class="col g-3" v-for="content in state.contents">
                     <div class="card border-0 rounded-0" v-if="content.media_type == 'movie' || content.media_type == 'tv'">
-                        <div class="content_cover" @mouseenter="isHover()">
+                        <div class="content_cover">
                             <PosterGenerator :elementPosterContent="content"></PosterGenerator>
                         </div>
                         <!-- /conten_cover -->
 
-                        <div class="content_info d-flex flex-column">
+                        <div class="content_info d-flex flex-column" @mouseenter="this.isHover = true"
+                            @mouseleave="this.isHover = false" :class="this.isHover ? 'isHover' : 'isOut'">
                             <div class="info_title">
                                 <h2 v-if="content.title">{{ content.title }}</h2>
                                 <h2 v-else>{{ content.name }}</h2>
