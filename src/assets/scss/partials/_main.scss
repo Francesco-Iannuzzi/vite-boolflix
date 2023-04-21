@@ -24,7 +24,6 @@ main {
             background-color: #000000c3;
 
             .info_title {
-                height: 20%;
 
                 h2 {
                     font-size: 1.5rem;
@@ -33,7 +32,6 @@ main {
             }
 
             .info_original_title {
-                height: 20%;
 
                 h4 {
                     font-size: 1rem;
@@ -42,7 +40,7 @@ main {
             }
 
             .info_overview {
-                height: 40%;
+                height: 100%;
                 overflow-y: auto;
 
                 p {
@@ -50,26 +48,6 @@ main {
                 }
             }
 
-            .info_vote {
-                height: 10%;
-            }
-
-            .info_language {
-                height: 10%;
-
-                img {
-                    max-height: 100%;
-                }
-            }
-
         }
-    }
-
-    .isHover {
-        color: red;
-    }
-
-    .isOut {
-        color: blue
     }
 }

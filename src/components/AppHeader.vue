@@ -20,11 +20,9 @@ export default {
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><strong>Boolflix</strong></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="logo navbar-brand" href="#"><strong>Boolflix</strong></a>
+                <!-- /logo -->
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -47,11 +45,14 @@ export default {
                         </li>
                     </ul>
                 </div>
+                <!-- /navbar -->
+
                 <div class="searchBox d-flex">
                     <input v-model="state.searchText" @keyup.enter="searchContents(state.API_URL_multi)" type="email"
                         class="form-control border-0 me-2" placeholder="Search Movies and Series">
                     <button class="btn py-0" @click="searchContents(state.API_URL_multi)">Submit</button>
                 </div>
+                <!-- /searchbox -->
             </div>
         </nav>
 

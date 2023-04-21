@@ -12,8 +12,7 @@ export default {
     },
     data() {
         return {
-            state,
-            isHover: false,
+            state
         }
     }
 }
@@ -31,7 +30,7 @@ export default {
                         </div>
                         <!-- /conten_cover -->
 
-                        <div class="content_info flex-column">
+                        <div class="content_info flex-column p-2">
                             <div class="info_title">
                                 <h2 v-if="content.title">{{ content.title }}</h2>
                                 <h2 v-else>{{ content.name }}</h2>
@@ -64,7 +63,6 @@ export default {
                 </div>
 
             </div>
-            <!-- /v-if founded movies or series -->
         </div>
     </main>
 </template>
