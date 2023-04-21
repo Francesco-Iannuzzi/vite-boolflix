@@ -31,8 +31,7 @@ export default {
                         </div>
                         <!-- /conten_cover -->
 
-                        <div class="content_info d-flex flex-column" @mouseenter="this.isHover = true"
-                            @mouseleave="this.isHover = false" :class="this.isHover ? 'isHover' : 'isOut'">
+                        <div class="content_info flex-column">
                             <div class="info_title">
                                 <h2 v-if="content.title">{{ content.title }}</h2>
                                 <h2 v-else>{{ content.name }}</h2>
