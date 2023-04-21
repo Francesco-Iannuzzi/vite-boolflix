@@ -26,7 +26,7 @@ export default {
 </script>
 
 <template>
-    <img width="92" height="138" :src="generationPosterContent(elementPosterContent)" alt="">
+    <img class="img-fluid" :src="generationPosterContent(elementPosterContent)" alt="">
 </template>
 
 

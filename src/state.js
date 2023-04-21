@@ -5,7 +5,7 @@ export const state = reactive({
     searchText: '',
     loading: true,
     API_URL_flags: 'https://flagsapi.com/',
-    API_URL_poster: 'https://image.tmdb.org/t/p/w92/',
+    API_URL_poster: 'https://image.tmdb.org/t/p/w342/',
     URL_star: 'https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png',
     movies: [],
     series: [],

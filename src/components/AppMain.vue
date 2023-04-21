@@ -14,32 +14,37 @@ export default {
         return {
             state
         }
-    },
+    }, methods: {
+        isHover() {
+
+        }
+    }
 }
 </script>
 
 <template>
-    <main>
-        <div class="movie_list">
-            <div v-if="state.movies.length !== 0 || state.series.length !== 0 || state.contents.length !== 0">
-                <h1>Print Movies</h1>
-                <ul v-for="content in state.contents">
-                    <li v-if="content.media_type == 'movie' || content.media_type == 'tv'">
-                        <span v-if="content.title">{{ content.title }}-</span>
-                        <span v-else>{{ content.name }}</span>
-                        <span v-if="content.original_title">{{ content.original_title }}-</span>
-                        <span v-else>{{ content.original_name }}</span>
-                        <PrintStars :elementStarContent="content"></PrintStars>
-                        <span>
-                            <FlagGenerator :elementContent="content"></FlagGenerator>
-                        </span>
+    <main class="py-5">
+        <div class="movie_list container-fluid">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5"
+                v-if="state.movies.length !== 0 || state.series.length !== 0 || state.contents.length !== 0">
+                <div class="col" v-for="content in state.contents">
+                    <div class="card" v-if="content.media_type == 'movie' || content.media_type == 'tv'">
                         <span>
                             <PosterGenerator :elementPosterContent="content"></PosterGenerator>
                         </span>
-                        <span>{{ content.vote_average }}</span>
-                    </li>
+                        <h2 v-if="content.title">{{ content.title }}</h2>
+                        <h2 v-else>{{ content.name }}</h2>
+                        <h4 v-if="content.original_title">{{ content.original_title }}</h4>
+                        <h4 v-else>{{ content.original_name }}</h4>
+                        <div class="d-flex">
+                            <PrintStars :elementStarContent="content"></PrintStars>
+                        </div>
+                        <div>
+                            <FlagGenerator :elementContent="content"></FlagGenerator>
+                        </div>
+                    </div>
                     <!-- /content -->
-                </ul>
+                </div>
             </div>
             <!-- /v-if founded movies or series -->
             <div v-else>
@@ -47,7 +52,6 @@ export default {
             </div>
             <!-- /v-else not found movies or series -->
         </div>
-
     </main>
 </template>
 
