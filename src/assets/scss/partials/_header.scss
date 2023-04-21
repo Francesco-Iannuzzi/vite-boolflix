@@ -1,0 +1,43 @@
+@use './variables.scss' as *;
+
+header {
+    background-color: $back_darker;
+    height: 5rem;
+
+    .navbar {
+        background-color: $back_darker;
+        color: $light;
+
+        .navbar-brand {
+            font-size: 2rem;
+            color: red;
+        }
+
+        .nav-link {
+            color: $lighter;
+
+            &:hover {
+                color: $light;
+                text-decoration: underline;
+            }
+        }
+
+        .searchBox {
+
+            input {
+                background-color: $back_dark;
+                color: $light;
+            }
+
+            .btn {
+                background-color: $back_dark;
+                color: $light;
+
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+
+}

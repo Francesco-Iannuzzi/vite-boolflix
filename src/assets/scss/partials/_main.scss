@@ -1,0 +1,6 @@
+@use './variables.scss' as *;
+
+main {
+    background-color: $back_dark;
+    color: $light;
+}
