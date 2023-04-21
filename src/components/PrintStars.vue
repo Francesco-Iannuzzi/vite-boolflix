@@ -9,7 +9,7 @@ export default {
         return {
             state,
             URL_star: 'https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png',
-            URL_star_empty: 'https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-empty-icon.png',
+            URL_star_empty: 'https://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/512/star-empty-icon.png',
         }
     },
     methods: {

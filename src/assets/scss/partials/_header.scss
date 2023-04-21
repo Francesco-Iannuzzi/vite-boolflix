@@ -10,7 +10,7 @@ header {
 
         .navbar-brand {
             font-size: 2rem;
-            color: red;
+            color: $evidence;
         }
 
         .nav-link {
@@ -34,7 +34,7 @@ header {
                 color: $light;
 
                 &:hover {
-                    color: red;
+                    color: $evidence;
                 }
             }
         }
