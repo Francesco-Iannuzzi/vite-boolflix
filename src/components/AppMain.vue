@@ -25,10 +25,9 @@ export default {
 <template>
     <main class="py-5">
         <div class="movie_list container-fluid">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5"
-                v-if="state.movies.length !== 0 || state.series.length !== 0 || state.contents.length !== 0">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5" v-if="state.contents.length !== 0">
                 <div class="col" v-for="content in state.contents">
-                    <div class="card" v-if="content.media_type == 'movie' || content.media_type == 'tv'">
+                    <div class="card border-0 rounded-0" v-if="content.media_type == 'movie' || content.media_type == 'tv'">
                         <span>
                             <PosterGenerator :elementPosterContent="content"></PosterGenerator>
                         </span>
